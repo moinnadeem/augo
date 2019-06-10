@@ -1,2 +1,2 @@
-# merta
+# augo
 our paper classification project
