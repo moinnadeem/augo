@@ -1,8 +1,8 @@
 # Augo
 
-Augo is a project which aims to revamp (arxiv-sanity)[https://github.com/karpathy/arxiv-sanity-preserver] to the modern era.
+Augo is a project which aims to revamp [arxiv-sanity](https://github.com/karpathy/arxiv-sanity-preserver) to the modern era.
 
-Directory structure:
+**Directory structure:**
 ```
 root/
 | scraping/
