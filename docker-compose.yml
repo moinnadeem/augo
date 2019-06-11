@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: "postgres:11.3-alpine"
+    networks:
+      - db_nw
+  flaskapp:
+    build: .
+    volumes:
+      - .:/opt/services/flaskapp/src
+    networks:
+      - db_nw
+      - web_nw
+  nginx:
+    image: "nginx:1.13.5"
+    ports:
+      - "8080:80"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+    networks:
+      - web_nw
+networks:
+  db_nw:
+    driver: bridge
+  web_nw:
+    driver: bridge
